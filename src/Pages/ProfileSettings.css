@@ -1,0 +1,156 @@
+/* src/pages/ProfileSettings.css */
+.profile-settings-page {
+  padding-bottom: 40px;
+}
+
+.settings-tabs {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 30px;
+}
+
+.settings-tabs button {
+  padding: 15px 25px;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  font-weight: 500;
+  color: #7f8c8d;
+  transition: all 0.3s ease;
+}
+
+.settings-tabs button:hover,
+.settings-tabs button.active {
+  color: #4a90e2;
+  border-bottom-color: #4a90e2;
+}
+
+.tab-content {
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #4a90e2;
+}
+
+.accounts-section h3 {
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.accounts-section p {
+  margin-bottom: 20px;
+  color: #7f8c8d;
+}
+
+.connected-accounts {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.account-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+}
+
+.account-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.account-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.account-icon.google {
+  background-color: #DB4437;
+  color: white;
+}
+
+.account-icon.facebook {
+  background-color: #4267B2;
+  color: white;
+}
+
+.account-icon.twitter {
+  background-color: #1DA1F2;
+  color: white;
+}
+
+.account-details h4 {
+  margin-bottom: 5px;
+  color: #2c3e50;
+  text-transform: capitalize;
+}
+
+.connected {
+  color: #2ecc71;
+  font-weight: 500;
+}
+
+.disconnected {
+  color: #e74c3c;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .settings-tabs {
+    flex-direction: column;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .account-item {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .account-info {
+    flex-direction: column;
+  }
+}

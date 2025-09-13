@@ -1,0 +1,202 @@
+/* --- Animated & Vibrant Deals of the Day Styles --- */
+
+.deals-page {
+  padding: 40px 0;
+  background: linear-gradient(135deg, #ff6e7f 0%, #bfe9ff 100%);
+  animation: fadeInBg 1.2s;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.10);
+}
+
+@keyframes fadeInBg {
+  from { opacity: 0; transform: scale(0.98);}
+  to { opacity: 1; transform: scale(1);}
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 40px;
+  animation: fadeInUp 1s;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+.page-header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #222;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px #bfe9ff66;
+  animation: pulseTitle 2s infinite;
+}
+
+@keyframes pulseTitle {
+  0% { text-shadow: 0 2px 8px #bfe9ff66;}
+  50% { text-shadow: 0 6px 24px #ff6e7f66;}
+  100% { text-shadow: 0 2px 8px #bfe9ff66;}
+}
+
+.countdown-timer h3 {
+  margin-bottom: 15px;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  animation: fadeInUp 1.5s;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.time-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #222 60%, #1976d2 100%);
+  color: #fff;
+  padding: 18px 24px;
+  border-radius: 12px;
+  min-width: 70px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  animation: pulseBox 1.5s infinite;
+}
+
+@keyframes pulseBox {
+  0% { box-shadow: 0 2px 12px rgba(0,0,0,0.08);}
+  50% { box-shadow: 0 4px 24px #ff6e7f33;}
+  100% { box-shadow: 0 2px 12px rgba(0,0,0,0.08);}
+}
+
+.time-value {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  animation: flipIn 0.7s;
+}
+
+@keyframes flipIn {
+  from { transform: rotateX(90deg); opacity: 0;}
+  to { transform: rotateX(0deg); opacity: 1;}
+}
+
+.time-label {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #bfe9ff;
+  margin-top: 4px;
+  letter-spacing: 1px;
+}
+
+.time-separator {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1976d2;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1;}
+  50% { opacity: 0.3;}
+}
+
+.deals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 32px;
+  animation: fadeInUp 1.5s;
+}
+
+.deal-card {
+  background: linear-gradient(135deg, #fff 80%, #bfe9ff 100%);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.13);
+  transition: transform 0.3s cubic-bezier(.25,.8,.25,1), box-shadow 0.3s;
+  position: relative;
+  animation: fadeInUp 1.2s;
+}
+
+.deal-card:hover {
+  transform: translateY(-10px) scale(1.03) rotate(-1deg);
+  box-shadow: 0 8px 32px #ff6e7f33;
+}
+
+.deal-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.deal-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s cubic-bezier(.25,.8,.25,1);
+}
+
+.deal-card:hover .deal-image img {
+  transform: scale(1.08) rotate(2deg);
+}
+
+.deal-info {
+  padding: 24px;
+  animation: fadeInUp 1.7s;
+}
+
+.deal-info h3 {
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+  color: #1976d2;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.stock-indicator {
+  margin: 15px 0;
+}
+
+.stock-bar {
+  height: 10px;
+  background-color: #ecf0f1;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+
+.stock-progress {
+  height: 100%;
+  background: linear-gradient(90deg, #ff6e7f 0%, #2ecc71 100%);
+  border-radius: 5px;
+  transition: width 0.5s cubic-bezier(.25,.8,.25,1);
+  animation: progressAnim 2s;
+}
+
+@keyframes progressAnim {
+  from { width: 0;}
+  to { width: var(--progress-width);}
+}
+
+.stock-indicator span {
+  font-size: 1rem;
+  color: #1976d2;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .deals-grid {
+    grid-template-columns: 1fr;
+  }
+  .deals-page {
+    border-radius: 0;
+    padding: 20px 0;
+  }
+}

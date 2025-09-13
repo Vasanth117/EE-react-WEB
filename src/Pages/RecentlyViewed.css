@@ -1,0 +1,73 @@
+.recently-viewed-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 32px 24px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+}
+
+.recently-viewed-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.recently-viewed-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+}
+
+.recently-viewed-item {
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.05);
+  padding: 18px 16px;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s;
+}
+
+.recently-viewed-item:hover {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+}
+
+.recently-viewed-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 14px;
+  background: #eaeaea;
+}
+
+.recently-viewed-info {
+  text-align: center;
+}
+
+.recently-viewed-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  text-decoration: none;
+  margin-bottom: 8px;
+  display: block;
+  transition: color 0.2s;
+}
+
+.recently-viewed-name:hover {
+  color: #1976d2;
+}
+
+.recently-viewed-price {
+  font-size: 1rem;
+  color: #4caf50;
+  font-weight: 500;
+  margin-top: 4px;
+}
