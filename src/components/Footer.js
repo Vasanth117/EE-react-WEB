@@ -13,10 +13,10 @@ const Footer = () => {
               <h3>ShopEase</h3>
               <p>Your one-stop destination for all your shopping needs. Quality products at affordable prices.</p>
               <div className="social-links">
-                <a href="#"><i className="fab fa-facebook-f"></i></a>
-                <a href="#"><i className="fab fa-twitter"></i></a>
-                <a href="#"><i className="fab fa-instagram"></i></a>
-                <a href="#"><i className="fab fa-pinterest"></i></a>
+                <a href="project1/src/Pages/AboutUs.js"><i className="fab fa-facebook-f"></i></a>
+                <a href="project1\src\Pages\Addresses.js"><i className="fab fa-twitter"></i></a>
+                <a href="project1/src/Pages/Careers.js"><i className="fab fa-instagram"></i></a>
+                <a href="project1/src/Pages/Category.js"><i className="fab fa-pinterest"></i></a>
               </div>
             </div>
             
